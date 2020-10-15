@@ -61,10 +61,10 @@ class motd_handler:
         if not self.database_connected:
             return
         for message in self.message_dict:
-            if self.message_dict["package"] == mypackage and \
-               self.check_valid_version(myversion, self.message_dict["versions"]):
-                   print (self.message_dict[message])
-                   self.action_handler(self.message_dict["action"])
+            if self.message_dict[message]["package"] == mypackage and \
+               self.check_valid_version(myversion, self.message_dict[message]["versions"]):
+                   print (self.message_dict[message]["message"])
+                   self.action_handler(self.message_dict[message]["action"])
         return
 
 
@@ -102,7 +102,7 @@ def get_version_numbers():
 
 
 if __name__ == '__main__':
-    mypackage = 'motd'
+    mypackage = 'esm_motd'
     myversion = '1.0'
 
     motd = motd_handler()
