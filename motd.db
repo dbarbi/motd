@@ -1,0 +1,3 @@
+somepackage	2.9	SOME_MESSAGE
+motd		<1.2	BLE
+motd		>2.3	OK	
